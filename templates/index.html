@@ -1,11 +1,9 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>Django Blog</title>
-</head>
-<body>
-	<h1>Django Blog app</h1>
-	{% for post in posts %}
+{% extends 'layout.html'%}
+
+{% block content%}
+
+	<div class="pt-5">
+		{% for post in posts %}
 		<div>
 			<h2>Title: {{post.title}}</h2>
 			<p>
@@ -15,6 +13,7 @@
 				<a href="{% url 'detail' post.id %}">View Post</a>
 			</p>
 		</div>
-	{% endfor %}
-</body>
-</html>
+		{% endfor %}
+	</div>
+
+{% endblock content %}

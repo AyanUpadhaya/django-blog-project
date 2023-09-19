@@ -1,9 +1,6 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>Django App</title>
-</head>
-<body>
+{% extends 'layout.html' %}
+
+{% block content %}
 	<div>
 		<h2>{{post.title}}</h2>
 		<p>
@@ -14,6 +11,4 @@
 			{{post.content}}
 		</p>
 	</div>
-
-</body>
-</html>
+{% endblock content %}
